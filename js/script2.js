@@ -23,7 +23,7 @@ function stopWatch() {
     stopwatchHours.textContent = hours;
     stopwatchMinutes.textContent = minutes;
     stopwatchSeconds.textContent = seconds;
-    timer = setTimeout(stopWatch, 10);
+    timer = setTimeout(stopWatch, 1000);
 }
 
 stopwatch__btn.addEventListener('click', function() {
