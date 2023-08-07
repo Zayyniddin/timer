@@ -21,9 +21,9 @@ function stopWatch() {
         minutes = 0;
     }
 
-    stopwatchHours.textContent = hours;
-    stopwatchMinutes.textContent = minutes;
-    stopwatchSeconds.textContent = seconds;
+    stopwatchHours.textContent = hours < 10 ? "0" + hours : hours;
+    stopwatchMinutes.textContent = minutes < 10 ? "0" + minutes : minutes;
+    stopwatchSeconds.textContent = seconds < 10 ? "0" + seconds : seconds;
     timer = setTimeout(stopWatch, 100);
 }
 
@@ -49,9 +49,9 @@ stopwatch__btn.addEventListener("click", function() {
         seconds = 0;
         minutes = 0;
         hours = 0;
-        stopwatchHours.textContent = "0";
-        stopwatchMinutes.textContent = "0";
-        stopwatchSeconds.textContent = "0";
+        stopwatchHours.textContent = "00";
+        stopwatchMinutes.textContent = "00";
+        stopwatchSeconds.textContent = "00";
         stopwatch__btn.textContent = 'start';
         stopwatch__btn.style.backgroundColor = '';
         stopwatch__btn.style.color = '';
