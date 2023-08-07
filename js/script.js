@@ -17,21 +17,20 @@ function clock() {
 clock();
 
 function clockBottom() {
-    const hoursBlock = document.querySelector(".hours"),
-  minutesBlock = document.querySelector(".minutes");
+  const hoursBlock = document.querySelector(".hours"),
+    minutesBlock = document.querySelector(".minutes");
 
-let time = new Date(),
-  minutes = time.getMinutes(),
-  hours = time.getHours();
+  let time = new Date(),
+    minutes = time.getMinutes(),
+    hours = time.getHours();
 
-hoursBlock.textContent = hours < 10 ? "0" + hours : hours;
-minutesBlock.textContent = minutes < 10 ? "0" + minutes : minutes;
+  hoursBlock.textContent = hours < 10 ? "0" + hours : hours;
+  minutesBlock.textContent = minutes < 10 ? "0" + minutes : minutes;
 
-setTimeout(() => clockBottom(), 60000)
+  setTimeout(() => clockBottom(), 60000);
 }
 
-clockBottom()
-
+clockBottom();
 
 let stopwatchTab = document.querySelector(".stopwatch");
 let clockTime = document.querySelector(".clock");
